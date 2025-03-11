@@ -1,0 +1,7 @@
+services:
+  gateway:
+    build: .
+    container_name: gateway
+    restart: always
+    ports:
+      - '50050:50050'

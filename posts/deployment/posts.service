@@ -1,0 +1,14 @@
+[Unit]
+Description=Posts service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/posts
+ExecStart=/root/posts/app --config=/root/posts/config.yaml
+Restart=always
+RestartSec=4
+StandardOutput=inherit
+
+[Install]
+WantedBy=multi-user.target
